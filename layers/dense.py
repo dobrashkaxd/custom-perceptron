@@ -4,6 +4,16 @@ from layers.abstract_layer import Layer
 
 class Dense(Layer):
     def __init__(self, in_features, out_features):
+        """
+        Initializes the Dense layer with randomly generated weights and zeros for bias.
+
+        Parameters:
+            in_features (int): The number of input features.
+            out_features (int): The number of output features.
+
+        Returns:
+            None
+        """
         self.weights = np.random.randn(in_features, out_features)
         self.bias = np.zeros(out_features)
         self.weights_gradient = None

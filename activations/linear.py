@@ -6,6 +6,15 @@ class Linear(Activation):
         self.bias = bias
 
     def activation(self, x):
+        """
+        Computes the activation function on the input x.
+
+        Parameters:
+            x: Input data to apply the activation function.
+
+        Returns:
+            The result of applying the activation function to the input data.
+        """
         return x + self.bias
 
     def gradient(self, x):
